@@ -157,9 +157,4 @@ Message ans = null;
     }
    
 
-    @ExceptionHandler(MissingServletRequestParameterException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public String handleMissingParams(MissingServletRequestParameterException ex) {
-        return ex.getParameterName() + " is missing in the query parameters and is required.";
-    }
 }

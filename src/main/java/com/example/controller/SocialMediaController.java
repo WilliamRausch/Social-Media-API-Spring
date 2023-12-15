@@ -37,7 +37,7 @@ public class SocialMediaController {
     @Autowired
     private MessageService messageService;
 
-    
+    //message
 
     @PostMapping("/register")
     public  ResponseEntity<Account> register( @RequestBody Account acc) {

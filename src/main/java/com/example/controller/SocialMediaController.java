@@ -44,7 +44,11 @@ public class SocialMediaController {
        
         Account account = new Account(acc.getUsername(), acc.getPassword());
         System.out.println("TEST" + account);
-       Account test = accountService.createAccount(account);
+        Account test = accountService.createAccount(account);
+        if(acc.getUsername() == null ||  acc.getPassword().length() <= 4){
+test = null;
+        }
+      
      if(test != null){
   return ResponseEntity.status(200)
      .body(test);
